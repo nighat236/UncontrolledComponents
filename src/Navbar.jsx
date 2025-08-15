@@ -1,16 +1,23 @@
-import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-function Navbar() {
+function NavBar() {
   return (
-    <nav style={{ backgroundColor: 'green', padding: '10px' }}>
-      <ul style={{ display: 'flex', listStyle: 'none', color: 'white', gap: '20px' }}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
+    <>
+      <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Contact Us</Nav.Link>
+            <Nav.Link href="#pricing">About Us</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
   );
 }
 
-export default Navbar;
+export default NavBar;

@@ -12,4 +12,4 @@ function DisplayData({ black, red }) {
   );
 }
 
-export default DisplayData;
+export default DropDown;
