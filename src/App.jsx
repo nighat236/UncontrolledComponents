@@ -1,15 +1,13 @@
-import React from 'react';
-import UncontrolledComp from './UncontrolledComp';
-// import IndependenceDayCard from './IndependenceDayCard';
+import UncontrolledRefInput from './demos/UncontrolledRefInput';
+import UncontrolledFormData from './demos/UncontrolledFormData';
 
-function App() {
- return(
-  <>
-  <h1 style={{color: "chocolate"}}>Learn React(with) Shahid Naeem</h1>
-  <UncontrolledComp/>
-  
-  </>
- )
+export default function App() {
+  return (
+    <div style={{ fontFamily: 'sans-serif', padding: 24 }}>
+      <h1>Uncontrolled Components</h1>
+      <UncontrolledRefInput />
+      <hr />
+      <UncontrolledFormData />
+    </div>
+  );
 }
-
-export default App;
