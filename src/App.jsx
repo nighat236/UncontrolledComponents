@@ -1,13 +1,19 @@
-import UncontrolledRefInput from './demos/UncontrolledRefInput';
-import UncontrolledFormData from './demos/UncontrolledFormData';
+import FunctionAsProps from './FunctionAsProps';
 
 export default function App() {
+  function showName(name) {
+    alert(name);
+  }
+  const password = () => {
+    alert('password is: 880946');
+  };
   return (
     <div style={{ fontFamily: 'sans-serif', padding: 24 }}>
-      <h1>Uncontrolled Components</h1>
-      <UncontrolledRefInput />
-      <hr />
-      <UncontrolledFormData />
+      <FunctionAsProps showName={showName} name="Wardah" password={password} />
+      <FunctionAsProps showName={showName} name="Zahida" password={password} />
+      <FunctionAsProps showName={showName} name="Ahmad" password={password} />
+      <FunctionAsProps showName={showName} name="Arsalan" password={password} />
+      <FunctionAsProps showName={showName} name="Asad" password={password} />
     </div>
   );
 }
